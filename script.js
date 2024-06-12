@@ -7,3 +7,15 @@ let messageContainer = {
     leavingRating: false,
     ratings: ['you enjoyed it!', 'you hated it', 'you thought it was alright', 'you need a second opinion', 'you would recomend it to a friend', 'you would never eat here again']
 };
+
+function selectRandom(){
+    return Math.floor(Math.random() * 5);
+};
+
+
+const entreeSelection = messageContainer.entrees[selectRandom()];
+const sideSelection = messageContainer.sides[selectRandom()];
+const beverageSelection = messageContainer.beverages[selectRandom()];
+
+const yourMessage = `You will have the ${entreeSelection} with a side of ${sideSelection} and a ${beverageSelection} to drink.`;
+console.log(yourMessage);
